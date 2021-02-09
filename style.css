@@ -14,7 +14,7 @@ h1 {
     0px 4px 0px #666777, 0px 5px 0px #555666, 0px 6px 0px #444555,
     0px 7px 0px #333444, 0px 8px 7px #001135;
 }
-h3 {
+.description {
   font-weight: 500;
   margin-top: 5px;
   font-style: italic;
@@ -38,7 +38,7 @@ main > section:not(:nth-child(2)) {
   z-index: 100;
   top: 0;
   background-color: #0f66a5;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   box-shadow: 0px 0px 10px 2px;
   border-radius: 0 0 20px 20px;
@@ -53,7 +53,6 @@ main > section:not(:nth-child(2)) {
   height: 100vh;
   background-image: url(https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80);
   background-size: cover;
-  
 }
 #navbar,
 #welcome-section,
@@ -104,7 +103,30 @@ main > section:not(:nth-child(2)) {
   height: 70vh;
   width: 70vw;
   flex-direction: column;
-  
+  position: relative;
+}
+.about-container .scroll-down-btn {
+  position: absolute;
+  bottom: -30px;
+  font-size: 30px;
+  color: #2d2c37;
+}
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .projects-container {
   display: grid;
@@ -149,7 +171,7 @@ main > section:not(:nth-child(2)) {
 }
 .btn,
 .project-tile,
-.social-media {
+.social-media{
   text-shadow: 2px 2px 4px #000;
 }
 .social-media i {
@@ -158,20 +180,45 @@ main > section:not(:nth-child(2)) {
 .social-media i:hover {
   transform: rotate3d(1, 1, 1, 325deg);
 }
+.skills{
+  font-size: 20px;
+  text-shadow: 1px 1px 3px #000;
+}
+.fa-html5{
+  color: #E44D26;
+}
+.fa-css3-alt{
+  color: #264DE4;
+}
+.fa-js-square{
+  color: #D6BA32;
+}
 @media (max-width: 768px) {
   .projects-container {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 674px) {
+  .description {
+    font-size: 15px;
   }
 }
 @media (max-width: 548px) {
   h1 {
     font-size: 30px;
   }
-  h3 {
-    font-size: 15px;
-  }
   .about-container {
     height: 40vh;
     width: 80vw;
+  }
+}
+@media (max-width: 477px) {
+  .description {
+    font-size: 13px;
+  }
+}
+@media (max-width: 375px) {
+  .description {
+    font-size: 10px;
   }
 }
