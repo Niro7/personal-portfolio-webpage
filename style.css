@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -48,6 +51,11 @@ main > section:not(:nth-child(2)) {
   color: white;
   font-weight: 600;
   padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+#navbar a:hover{
+  text-shadow: 0 0 5px #030e17;
+    transform: scale(1.05);
 }
 #welcome-section {
   height: 100vh;
@@ -152,13 +160,25 @@ main > section:not(:nth-child(2)) {
   flex-direction: column;
   text-align: center;
   box-shadow: 0 0 7px #101113;
+  transition: all 0.3s ease-in-out;
+}
+.project-tile:hover{
+  transform: scale(1.03);
 }
 .project-tile span {
   background: #15a084;
   width: 100%;
+  transition: all 0.1s ease-in-out;
+}
+.project-tile span:hover{
+ background: #0e8f75;
 }
 .project-tile a:nth-child(2) {
   background: #161b22;
+}
+.project-tile a:nth-child(2):hover{
+  background: #11151b;
+
 }
 .project-tile a:first-child {
   display: inline-grid;
@@ -186,6 +206,7 @@ main > section:not(:nth-child(2)) {
 }
 .social-media i:hover {
   transform: rotate3d(1, 1, 1, 325deg);
+  color: #f5b1ae;
 }
 .skills{
   font-size: 20px;
